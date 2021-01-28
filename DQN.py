@@ -1,5 +1,5 @@
 '''
-DQN with CartPole
+DQN with CartPole-v1
 STATE:
     same as CartPole's observations https://github.com/openai/gym/wiki/CartPole-v0
 ACTION:
@@ -21,7 +21,7 @@ LEARNING_RATE = 0.01  # learning rate
 EPSILON = 0.9  #greedy policy
 GAMMA = 0.9 # reward discount
 MEMORY_CAPACITY = 200
-env = gym.make('CartPole-v0').unwrapped
+env = gym.make('CartPole-v1').unwrapped
 n_actions = env.action_space.n 
 n_states = env.observation_space.shape[0]
 
@@ -75,7 +75,7 @@ def choose_action(s):
 
 
 def update():
-    pass 
+    pass
 
 if __name__ == "__main__":
     memory = ReplayMemory(MEMORY_CAPACITY)
